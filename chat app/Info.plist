@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>me want take pictures</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>me want key to picture library</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -21,5 +25,20 @@
 			</array>
 		</dict>
 	</dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1287713035066803</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>1287713035066803</string>
+	<key>FacebookClientToken</key>
+	<string>cfad84028acd16741bce4af728238daa</string>
+	<key>FacebookDisplayName</key>
+	<string>app</string>
 </dict>
 </plist>

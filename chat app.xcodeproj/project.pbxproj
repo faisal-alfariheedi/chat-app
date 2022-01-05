@@ -14,27 +14,24 @@
 		3AECE3352784CAF500BFA22D /* chat_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3332784CAF500BFA22D /* chat_app.xcdatamodeld */; };
 		3AECE3372784CAF600BFA22D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AECE3362784CAF600BFA22D /* Assets.xcassets */; };
 		3AECE33A2784CAF600BFA22D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AECE3382784CAF600BFA22D /* LaunchScreen.storyboard */; };
-		3AECE3452784CAF600BFA22D /* chat_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3442784CAF600BFA22D /* chat_appTests.swift */; };
-		3AECE34F2784CAF600BFA22D /* chat_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE34E2784CAF600BFA22D /* chat_appUITests.swift */; };
-		3AECE3512784CAF600BFA22D /* chat_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3502784CAF600BFA22D /* chat_appUITestsLaunchTests.swift */; };
+		3AECE3612784CB5D00BFA22D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3AECE3602784CB5D00BFA22D /* FirebaseAuth */; };
+		3AECE3632784CB5D00BFA22D /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3AECE3622784CB5D00BFA22D /* FirebaseDatabase */; };
+		3AECE3652784CB5D00BFA22D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3AECE3642784CB5D00BFA22D /* FirebaseStorage */; };
+		3AECE3682784CCCD00BFA22D /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 3AECE3672784CCCD00BFA22D /* FacebookLogin */; };
+		3AECE36B2784CD2200BFA22D /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3AECE36A2784CD2200BFA22D /* MessageKit */; };
+		3AECE36E2784CD3B00BFA22D /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 3AECE36D2784CD3B00BFA22D /* JGProgressHUD */; };
+		3AECE37A2784DF6A00BFA22D /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AECE3772784DF6A00BFA22D /* face.png */; };
+		3AECE37B2784DF6A00BFA22D /* Facebook_Messenger-Logo.wine.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AECE3782784DF6A00BFA22D /* Facebook_Messenger-Logo.wine.png */; };
+		3AECE37C2784DF6A00BFA22D /* gog.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AECE3792784DF6A00BFA22D /* gog.png */; };
+		3AECE37E2784DFB500BFA22D /* convViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE37D2784DFB500BFA22D /* convViewController.swift */; };
+		3AECE3802784DFE900BFA22D /* regViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE37F2784DFE900BFA22D /* regViewController.swift */; };
+		3AECE3822784E04100BFA22D /* DBmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3812784E04100BFA22D /* DBmanager.swift */; };
+		3AECE3842784E06700BFA22D /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3832784E06700BFA22D /* user.swift */; };
+		3AECE3862784E0A900BFA22D /* newconvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3852784E0A900BFA22D /* newconvViewController.swift */; };
+		3AECE3882784E0C800BFA22D /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3872784E0C800BFA22D /* profileViewController.swift */; };
+		3AECE38B2784EB2000BFA22D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3AECE38A2784EB2000BFA22D /* RealmSwift */; };
+		3AECE38E2784EDE500BFA22D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AECE38C2784EC9A00BFA22D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		3AECE3412784CAF600BFA22D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3AECE31F2784CAF500BFA22D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3AECE3262784CAF500BFA22D;
-			remoteInfo = "chat app";
-		};
-		3AECE34B2784CAF600BFA22D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3AECE31F2784CAF500BFA22D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3AECE3262784CAF500BFA22D;
-			remoteInfo = "chat app";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3AECE3272784CAF500BFA22D /* chat app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "chat app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,11 +43,19 @@
 		3AECE3362784CAF600BFA22D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AECE3392784CAF600BFA22D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AECE33B2784CAF600BFA22D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AECE3402784CAF600BFA22D /* chat appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "chat appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AECE3442784CAF600BFA22D /* chat_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chat_appTests.swift; sourceTree = "<group>"; };
-		3AECE34A2784CAF600BFA22D /* chat appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "chat appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AECE34E2784CAF600BFA22D /* chat_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chat_appUITests.swift; sourceTree = "<group>"; };
 		3AECE3502784CAF600BFA22D /* chat_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chat_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3AECE3772784DF6A00BFA22D /* face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face.png; sourceTree = "<group>"; };
+		3AECE3782784DF6A00BFA22D /* Facebook_Messenger-Logo.wine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook_Messenger-Logo.wine.png"; sourceTree = "<group>"; };
+		3AECE3792784DF6A00BFA22D /* gog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gog.png; sourceTree = "<group>"; };
+		3AECE37D2784DFB500BFA22D /* convViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = convViewController.swift; sourceTree = "<group>"; };
+		3AECE37F2784DFE900BFA22D /* regViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regViewController.swift; sourceTree = "<group>"; };
+		3AECE3812784E04100BFA22D /* DBmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBmanager.swift; sourceTree = "<group>"; };
+		3AECE3832784E06700BFA22D /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		3AECE3852784E0A900BFA22D /* newconvViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newconvViewController.swift; sourceTree = "<group>"; };
+		3AECE3872784E0C800BFA22D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		3AECE38C2784EC9A00BFA22D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,20 +63,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3AECE33D2784CAF600BFA22D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3AECE3472784CAF600BFA22D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				3AECE3682784CCCD00BFA22D /* FacebookLogin in Frameworks */,
+				3AECE3632784CB5D00BFA22D /* FirebaseDatabase in Frameworks */,
+				3AECE38B2784EB2000BFA22D /* RealmSwift in Frameworks */,
+				3AECE3612784CB5D00BFA22D /* FirebaseAuth in Frameworks */,
+				3AECE3652784CB5D00BFA22D /* FirebaseStorage in Frameworks */,
+				3AECE36E2784CD3B00BFA22D /* JGProgressHUD in Frameworks */,
+				3AECE36B2784CD2200BFA22D /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +83,7 @@
 				3AECE3432784CAF600BFA22D /* chat appTests */,
 				3AECE34D2784CAF600BFA22D /* chat appUITests */,
 				3AECE3282784CAF500BFA22D /* Products */,
+				3AECE3892784EB2000BFA22D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,8 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				3AECE3272784CAF500BFA22D /* chat app.app */,
-				3AECE3402784CAF600BFA22D /* chat appTests.xctest */,
-				3AECE34A2784CAF600BFA22D /* chat appUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,14 +98,11 @@
 		3AECE3292784CAF500BFA22D /* chat app */ = {
 			isa = PBXGroup;
 			children = (
-				3AECE32A2784CAF500BFA22D /* AppDelegate.swift */,
-				3AECE32C2784CAF500BFA22D /* SceneDelegate.swift */,
-				3AECE32E2784CAF500BFA22D /* ViewController.swift */,
-				3AECE3302784CAF500BFA22D /* Main.storyboard */,
-				3AECE3362784CAF600BFA22D /* Assets.xcassets */,
-				3AECE3382784CAF600BFA22D /* LaunchScreen.storyboard */,
 				3AECE33B2784CAF600BFA22D /* Info.plist */,
-				3AECE3332784CAF500BFA22D /* chat_app.xcdatamodeld */,
+				3AECE3732784DEB100BFA22D /* base */,
+				3AECE3742784DEE300BFA22D /* controllers */,
+				3AECE3762784DF0600BFA22D /* assets */,
+				3AECE3722784DEA100BFA22D /* views */,
 			);
 			path = "chat app";
 			sourceTree = "<group>";
@@ -130,6 +124,58 @@
 			path = "chat appUITests";
 			sourceTree = "<group>";
 		};
+		3AECE3722784DEA100BFA22D /* views */ = {
+			isa = PBXGroup;
+			children = (
+				3AECE3382784CAF600BFA22D /* LaunchScreen.storyboard */,
+				3AECE3302784CAF500BFA22D /* Main.storyboard */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		3AECE3732784DEB100BFA22D /* base */ = {
+			isa = PBXGroup;
+			children = (
+				3AECE38C2784EC9A00BFA22D /* GoogleService-Info.plist */,
+				3AECE32A2784CAF500BFA22D /* AppDelegate.swift */,
+				3AECE32C2784CAF500BFA22D /* SceneDelegate.swift */,
+				3AECE3332784CAF500BFA22D /* chat_app.xcdatamodeld */,
+				3AECE3362784CAF600BFA22D /* Assets.xcassets */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		3AECE3742784DEE300BFA22D /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3AECE32E2784CAF500BFA22D /* ViewController.swift */,
+				3AECE37D2784DFB500BFA22D /* convViewController.swift */,
+				3AECE37F2784DFE900BFA22D /* regViewController.swift */,
+				3AECE3812784E04100BFA22D /* DBmanager.swift */,
+				3AECE3832784E06700BFA22D /* user.swift */,
+				3AECE3852784E0A900BFA22D /* newconvViewController.swift */,
+				3AECE3872784E0C800BFA22D /* profileViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		3AECE3762784DF0600BFA22D /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				3AECE3772784DF6A00BFA22D /* face.png */,
+				3AECE3782784DF6A00BFA22D /* Facebook_Messenger-Logo.wine.png */,
+				3AECE3792784DF6A00BFA22D /* gog.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		3AECE3892784EB2000BFA22D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,45 +192,18 @@
 			dependencies = (
 			);
 			name = "chat app";
+			packageProductDependencies = (
+				3AECE3602784CB5D00BFA22D /* FirebaseAuth */,
+				3AECE3622784CB5D00BFA22D /* FirebaseDatabase */,
+				3AECE3642784CB5D00BFA22D /* FirebaseStorage */,
+				3AECE3672784CCCD00BFA22D /* FacebookLogin */,
+				3AECE36A2784CD2200BFA22D /* MessageKit */,
+				3AECE36D2784CD3B00BFA22D /* JGProgressHUD */,
+				3AECE38A2784EB2000BFA22D /* RealmSwift */,
+			);
 			productName = "chat app";
 			productReference = 3AECE3272784CAF500BFA22D /* chat app.app */;
 			productType = "com.apple.product-type.application";
-		};
-		3AECE33F2784CAF600BFA22D /* chat appTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3AECE3572784CAF600BFA22D /* Build configuration list for PBXNativeTarget "chat appTests" */;
-			buildPhases = (
-				3AECE33C2784CAF600BFA22D /* Sources */,
-				3AECE33D2784CAF600BFA22D /* Frameworks */,
-				3AECE33E2784CAF600BFA22D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3AECE3422784CAF600BFA22D /* PBXTargetDependency */,
-			);
-			name = "chat appTests";
-			productName = "chat appTests";
-			productReference = 3AECE3402784CAF600BFA22D /* chat appTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		3AECE3492784CAF600BFA22D /* chat appUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3AECE35A2784CAF600BFA22D /* Build configuration list for PBXNativeTarget "chat appUITests" */;
-			buildPhases = (
-				3AECE3462784CAF600BFA22D /* Sources */,
-				3AECE3472784CAF600BFA22D /* Frameworks */,
-				3AECE3482784CAF600BFA22D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3AECE34C2784CAF600BFA22D /* PBXTargetDependency */,
-			);
-			name = "chat appUITests";
-			productName = "chat appUITests";
-			productReference = 3AECE34A2784CAF600BFA22D /* chat appUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -199,14 +218,6 @@
 					3AECE3262784CAF500BFA22D = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
-					3AECE33F2784CAF600BFA22D = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 3AECE3262784CAF500BFA22D;
-					};
-					3AECE3492784CAF600BFA22D = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 3AECE3262784CAF500BFA22D;
-					};
 				};
 			};
 			buildConfigurationList = 3AECE3222784CAF500BFA22D /* Build configuration list for PBXProject "chat app" */;
@@ -218,13 +229,18 @@
 				Base,
 			);
 			mainGroup = 3AECE31E2784CAF500BFA22D;
+			packageReferences = (
+				3AECE35F2784CB5D00BFA22D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3AECE3662784CCCD00BFA22D /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				3AECE3692784CD2200BFA22D /* XCRemoteSwiftPackageReference "MessageKit" */,
+				3AECE36C2784CD3B00BFA22D /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+				3AECE36F2784CD5900BFA22D /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 3AECE3282784CAF500BFA22D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				3AECE3262784CAF500BFA22D /* chat app */,
-				3AECE33F2784CAF600BFA22D /* chat appTests */,
-				3AECE3492784CAF600BFA22D /* chat appUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,22 +251,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AECE33A2784CAF600BFA22D /* LaunchScreen.storyboard in Resources */,
+				3AECE37A2784DF6A00BFA22D /* face.png in Resources */,
+				3AECE37C2784DF6A00BFA22D /* gog.png in Resources */,
 				3AECE3372784CAF600BFA22D /* Assets.xcassets in Resources */,
+				3AECE37B2784DF6A00BFA22D /* Facebook_Messenger-Logo.wine.png in Resources */,
+				3AECE38E2784EDE500BFA22D /* GoogleService-Info.plist in Resources */,
 				3AECE3322784CAF500BFA22D /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3AECE33E2784CAF600BFA22D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3AECE3482784CAF600BFA22D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,42 +269,18 @@
 			files = (
 				3AECE32F2784CAF500BFA22D /* ViewController.swift in Sources */,
 				3AECE3352784CAF500BFA22D /* chat_app.xcdatamodeld in Sources */,
+				3AECE3822784E04100BFA22D /* DBmanager.swift in Sources */,
 				3AECE32B2784CAF500BFA22D /* AppDelegate.swift in Sources */,
+				3AECE3842784E06700BFA22D /* user.swift in Sources */,
+				3AECE37E2784DFB500BFA22D /* convViewController.swift in Sources */,
 				3AECE32D2784CAF500BFA22D /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3AECE33C2784CAF600BFA22D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3AECE3452784CAF600BFA22D /* chat_appTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3AECE3462784CAF600BFA22D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3AECE3512784CAF600BFA22D /* chat_appUITestsLaunchTests.swift in Sources */,
-				3AECE34F2784CAF600BFA22D /* chat_appUITests.swift in Sources */,
+				3AECE3802784DFE900BFA22D /* regViewController.swift in Sources */,
+				3AECE3882784E0C800BFA22D /* profileViewController.swift in Sources */,
+				3AECE3862784E0A900BFA22D /* newconvViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3AECE3422784CAF600BFA22D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3AECE3262784CAF500BFA22D /* chat app */;
-			targetProxy = 3AECE3412784CAF600BFA22D /* PBXContainerItemProxy */;
-		};
-		3AECE34C2784CAF600BFA22D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3AECE3262784CAF500BFA22D /* chat app */;
-			targetProxy = 3AECE34B2784CAF600BFA22D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3AECE3302784CAF500BFA22D /* Main.storyboard */ = {
@@ -490,78 +472,6 @@
 			};
 			name = Release;
 		};
-		3AECE3582784CAF600BFA22D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "faisal.chat-appTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chat app.app/chat app";
-			};
-			name = Debug;
-		};
-		3AECE3592784CAF600BFA22D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "faisal.chat-appTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chat app.app/chat app";
-			};
-			name = Release;
-		};
-		3AECE35B2784CAF600BFA22D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "faisal.chat-appUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "chat app";
-			};
-			name = Debug;
-		};
-		3AECE35C2784CAF600BFA22D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "faisal.chat-appUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "chat app";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -583,25 +493,88 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3AECE3572784CAF600BFA22D /* Build configuration list for PBXNativeTarget "chat appTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3AECE3582784CAF600BFA22D /* Debug */,
-				3AECE3592784CAF600BFA22D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3AECE35A2784CAF600BFA22D /* Build configuration list for PBXNativeTarget "chat appUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3AECE35B2784CAF600BFA22D /* Debug */,
-				3AECE35C2784CAF600BFA22D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3AECE35F2784CB5D00BFA22D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3AECE3662784CCCD00BFA22D /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		3AECE3692784CD2200BFA22D /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3AECE36C2784CD3B00BFA22D /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3AECE36F2784CD5900BFA22D /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3AECE3602784CB5D00BFA22D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AECE35F2784CB5D00BFA22D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		3AECE3622784CB5D00BFA22D /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AECE35F2784CB5D00BFA22D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		3AECE3642784CB5D00BFA22D /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AECE35F2784CB5D00BFA22D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		3AECE3672784CCCD00BFA22D /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AECE3662784CCCD00BFA22D /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		3AECE36A2784CD2200BFA22D /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AECE3692784CD2200BFA22D /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+		3AECE36D2784CD3B00BFA22D /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AECE36C2784CD3B00BFA22D /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
+		};
+		3AECE38A2784EB2000BFA22D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AECE36F2784CD5900BFA22D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3AECE3332784CAF500BFA22D /* chat_app.xcdatamodeld */ = {
