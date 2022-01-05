@@ -20,7 +20,11 @@ final class DBmanger {
     
     // create a simple write function
     
-    
+    public func safeEmail(email:String) -> String {
+        var safeEmail = email.replacingOccurrences(of: ".", with: "-")
+        safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
+        return safeEmail
+    }
     public func userDoExists(with email:String, completion: @escaping ((Bool) -> Void)) {
             // will return true if the user email does not exist
             
@@ -30,7 +34,7 @@ final class DBmanger {
             var safeEmail = email.replacingOccurrences(of: ".", with: "-")
             safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
             
-            database.child(safeEmail).observeSingleEvent(of: .value) { snapshot in
+            database.child("users").child(safeEmail).observeSingleEvent(of: .value) { snapshot in
                 // snapshot has a value property that can be optional if it doesn't exist
                 
                 guard snapshot.value as? String != nil else {
@@ -48,7 +52,7 @@ final class DBmanger {
         var safeEmail = email.replacingOccurrences(of: ".", with: "-")
         safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
         
-        database.child(safeEmail).observeSingleEvent(of: .value, with: { snapshot in
+        database.child("users").child(safeEmail).observeSingleEvent(of: .value, with: { snapshot in
             // Get user value
             let value = snapshot.value as! NSDictionary
             myuser.userr = userr(id: myuser.fireuser!.uid, email: myuser.fireuser!.email!, first: value["first_name"] as! String, last: value["last_name"] as! String , picurl: value["picurl"] as! String)
@@ -67,16 +71,17 @@ final class DBmanger {
             switch Result{
                 case .success(let url):
                     myuser.userr = userr(id: temp.uid, email: temp.email!, first: first, last: last, picurl:url)
-                    self.database.child(myuser.userr!.firemailsafe).setValue(["first_name":myuser.userr!.first,"last_name":myuser.userr!.last,"picurl":myuser.userr!.picurl])
+                    self.database.child("users").child(myuser.userr!.firemailsafe).setValue(["first_name":myuser.userr!.first,"last_name":myuser.userr!.last,"picurl":myuser.userr!.picurl])
                 
                 case .failure(let err): print(err)
             }
         })
         }
-    public func fbinsertUser(with id:String,email:String,url:String?,first:String,last:String){
+    public func fbinsertUser(with id:String,email:String,url:String,first:String,last:String){
             myuser.userr = userr(id: id, email: email, first: first, last: last, picurl:url)
-            self.database.child(myuser.userr!.firemailsafe).setValue(["first_name":myuser.userr!.first,"last_name":myuser.userr!.last,"picurl":myuser.userr!.picurl])
+            self.database.child("users").child(myuser.userr!.firemailsafe).setValue(["first_name":myuser.userr!.first,"last_name":myuser.userr!.last,"picurl":myuser.userr!.picurl])
         }
+    
     
     
     public typealias UploadPictureCompletion = (Result<String, Error>) -> Void // type alias makes things cleaner

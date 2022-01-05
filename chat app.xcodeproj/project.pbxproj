@@ -27,10 +27,11 @@
 		3AECE3802784DFE900BFA22D /* regViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE37F2784DFE900BFA22D /* regViewController.swift */; };
 		3AECE3822784E04100BFA22D /* DBmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3812784E04100BFA22D /* DBmanager.swift */; };
 		3AECE3842784E06700BFA22D /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3832784E06700BFA22D /* user.swift */; };
-		3AECE3862784E0A900BFA22D /* newconvViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3852784E0A900BFA22D /* newconvViewController.swift */; };
+		3AECE3862784E0A900BFA22D /* chatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3852784E0A900BFA22D /* chatViewController.swift */; };
 		3AECE3882784E0C800BFA22D /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3872784E0C800BFA22D /* profileViewController.swift */; };
 		3AECE38B2784EB2000BFA22D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3AECE38A2784EB2000BFA22D /* RealmSwift */; };
 		3AECE38E2784EDE500BFA22D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AECE38C2784EC9A00BFA22D /* GoogleService-Info.plist */; };
+		3AECE3912785CFBB00BFA22D /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3902785CFBB00BFA22D /* models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,9 +54,10 @@
 		3AECE37F2784DFE900BFA22D /* regViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regViewController.swift; sourceTree = "<group>"; };
 		3AECE3812784E04100BFA22D /* DBmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBmanager.swift; sourceTree = "<group>"; };
 		3AECE3832784E06700BFA22D /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
-		3AECE3852784E0A900BFA22D /* newconvViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newconvViewController.swift; sourceTree = "<group>"; };
+		3AECE3852784E0A900BFA22D /* chatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatViewController.swift; sourceTree = "<group>"; };
 		3AECE3872784E0C800BFA22D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		3AECE38C2784EC9A00BFA22D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3AECE3902785CFBB00BFA22D /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +155,8 @@
 				3AECE37F2784DFE900BFA22D /* regViewController.swift */,
 				3AECE3812784E04100BFA22D /* DBmanager.swift */,
 				3AECE3832784E06700BFA22D /* user.swift */,
-				3AECE3852784E0A900BFA22D /* newconvViewController.swift */,
+				3AECE3852784E0A900BFA22D /* chatViewController.swift */,
+				3AECE3902785CFBB00BFA22D /* models.swift */,
 				3AECE3872784E0C800BFA22D /* profileViewController.swift */,
 			);
 			path = controllers;
@@ -276,7 +279,8 @@
 				3AECE32D2784CAF500BFA22D /* SceneDelegate.swift in Sources */,
 				3AECE3802784DFE900BFA22D /* regViewController.swift in Sources */,
 				3AECE3882784E0C800BFA22D /* profileViewController.swift in Sources */,
-				3AECE3862784E0A900BFA22D /* newconvViewController.swift in Sources */,
+				3AECE3862784E0A900BFA22D /* chatViewController.swift in Sources */,
+				3AECE3912785CFBB00BFA22D /* models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

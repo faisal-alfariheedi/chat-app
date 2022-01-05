@@ -102,9 +102,9 @@ extension convViewController: UITableViewDelegate, UITableViewDataSource {
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        tableView.deselectRow(at: indexPath, animated: true)
        
-       let vc = newconvViewController()
-       vc.title = "Jenny Smith"
-       vc.navigationItem.largeTitleDisplayMode = .never
-       navigationController?.pushViewController(vc, animated: true)
+//       let vc = chatViewController(with: chatlist, id: <#String?#>)
+//       vc.title = chatlist[indexPath.row]
+//       vc.navigationItem.largeTitleDisplayMode = .never
+//       navigationController?.pushViewController(vc, animated: true)
    }
 }

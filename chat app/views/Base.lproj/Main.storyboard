@@ -154,10 +154,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook_Messenger-Logo.wine.png" translatesAutoresizingMaskIntoConstraints="NO" id="OHP-hB-eFg">
                                 <rect key="frame" x="65.5" y="88" width="283" height="149.5"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fe5-np-sqK">
-                                <rect key="frame" x="20" y="486" width="374" height="61"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fAb-bB-A7O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -165,16 +161,11 @@
                             <constraint firstItem="TrM-CY-qKD" firstAttribute="top" secondItem="OHP-hB-eFg" secondAttribute="bottom" constant="30" id="0dT-6N-Nfv"/>
                             <constraint firstItem="5bH-wP-J35" firstAttribute="centerX" secondItem="gV8-q5-okr" secondAttribute="centerX" id="2I0-hd-tfD"/>
                             <constraint firstItem="OHP-hB-eFg" firstAttribute="centerX" secondItem="gV8-q5-okr" secondAttribute="centerX" id="4I2-xl-6Xb"/>
-                            <constraint firstItem="fe5-np-sqK" firstAttribute="top" secondItem="5bH-wP-J35" secondAttribute="bottom" constant="10" id="5LR-fo-tEb"/>
-                            <constraint firstItem="fe5-np-sqK" firstAttribute="height" secondItem="5bH-wP-J35" secondAttribute="height" multiplier="1.08929" id="Apc-vo-3Cy"/>
-                            <constraint firstItem="fe5-np-sqK" firstAttribute="leading" secondItem="fAb-bB-A7O" secondAttribute="leading" constant="20" id="DIh-ZU-shM"/>
-                            <constraint firstItem="fAb-bB-A7O" firstAttribute="trailing" secondItem="fe5-np-sqK" secondAttribute="trailing" constant="20" id="Faf-KF-j8u"/>
                             <constraint firstItem="fAb-bB-A7O" firstAttribute="trailing" secondItem="TrM-CY-qKD" secondAttribute="trailing" constant="20" id="IVR-Ed-bs5"/>
                             <constraint firstItem="5bH-wP-J35" firstAttribute="centerY" secondItem="gV8-q5-okr" secondAttribute="centerY" id="JD2-Yf-wX3"/>
                             <constraint firstItem="fAb-bB-A7O" firstAttribute="trailing" secondItem="Euz-7Q-pYb" secondAttribute="trailing" constant="20" id="K1G-D5-F8f"/>
                             <constraint firstItem="Euz-7Q-pYb" firstAttribute="leading" secondItem="fAb-bB-A7O" secondAttribute="leading" constant="20" id="M5e-6K-TWM"/>
                             <constraint firstItem="Euz-7Q-pYb" firstAttribute="top" secondItem="TrM-CY-qKD" secondAttribute="bottom" constant="20" id="V3e-MJ-ouy"/>
-                            <constraint firstItem="fAb-bB-A7O" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fe5-np-sqK" secondAttribute="bottom" constant="20" id="aJV-oi-N7v"/>
                             <constraint firstItem="OHP-hB-eFg" firstAttribute="top" secondItem="fAb-bB-A7O" secondAttribute="top" id="fBZ-Is-wqT"/>
                             <constraint firstItem="TrM-CY-qKD" firstAttribute="leading" secondItem="fAb-bB-A7O" secondAttribute="leading" constant="20" id="ho3-FT-MLI"/>
                             <constraint firstItem="5bH-wP-J35" firstAttribute="leading" secondItem="fAb-bB-A7O" secondAttribute="leading" constant="20" id="kUz-cz-CxV"/>
@@ -191,8 +182,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="email" destination="TrM-CY-qKD" id="jec-ic-6Xc"/>
+                        <outlet property="login" destination="5bH-wP-J35" id="ruz-ws-Q9s"/>
                         <outlet property="pass" destination="Euz-7Q-pYb" id="PSl-62-KkT"/>
-                        <outlet property="vi" destination="fe5-np-sqK" id="Qpc-0q-aAY"/>
                         <segue destination="HFI-d3-wTd" kind="show" identifier="reg" id="pp5-cY-C18"/>
                     </connections>
                 </viewController>
@@ -325,10 +316,10 @@
             </objects>
             <point key="canvasLocation" x="4694" y="860"/>
         </scene>
-        <!--Newconv View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="wrk-di-Rab">
             <objects>
-                <viewController id="Jv2-bg-dHo" customClass="newconvViewController" customModule="chat_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Jv2-bg-dHo" customClass="chatViewController" customModule="chat_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hso-Z8-uve">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -347,6 +338,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EAe-L4-5Wc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="chatlist" id="wzq-VB-ZoJ"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="SeU-Cg-rxz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jzy-ih-4yP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -24,6 +24,7 @@ struct userr{
         return safeEmail
     }
     var picurl:String?
+    
 }
 //struct ChatAppUser {
 //    let firstName: String

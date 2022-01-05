@@ -14,16 +14,13 @@ class logiViewController: UIViewController {
 
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var pass: UITextField!
-    @IBOutlet weak var vi: UIView!
+    @IBOutlet weak var login: UIButton!
     var fblogin = FBLoginButton()
     var own:convViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fblogin.center = vi.center
-        fblogin.delegate=self
-        fblogin.frame = vi.frame
-        vi.addSubview(fblogin)
+        
         email.layer.cornerRadius = 12
         email.layer.borderWidth = 1
         email.layer.borderColor = UIColor.lightGray.cgColor
@@ -32,9 +29,15 @@ class logiViewController: UIViewController {
         pass.layer.borderColor = UIColor.lightGray.cgColor
         if let token = AccessToken.current,
                 !token.isExpired {
-                    fblogin.permissions = ["public_profile", "email"]
-            }
-        
+                    fblogin.permissions = ["public_profile", "email","image"]
+                }else{
+
+                    
+                }
+        fblogin.delegate=self
+                            fblogin.center = view.center
+                            fblogin.center.y += CGFloat(40)
+                            view.addSubview(fblogin)
         // Do any additional setup after loading the view.
     }
     override func awakeFromNib() {
@@ -51,7 +54,7 @@ class logiViewController: UIViewController {
                     print("login was successful")
                     myuser.fireuser=authResult?.user
                     DBmanger.shared.setuser(with: myuser.fireuser!.email!)
-                    self.own!.dismiss(animated: true, completion: nil)
+                    /*self.own!.*/self.dismiss(animated: true, completion: nil)
                 }
             }
         }
@@ -73,35 +76,46 @@ extension logiViewController:LoginButtonDelegate {
         if let error = error {
             print(error.localizedDescription)
             return
-          }
+        }else{
         if let result = result {
+            if result.isCancelled {}else{
             let credential = FacebookAuthProvider
               .credential(withAccessToken: AccessToken.current!.tokenString)
             authwithfirebase(credential: credential)
+            }
         }
         
-        
+        }
     }
+
     
     func authwithfirebase(credential: AuthCredential){
         Auth.auth().signIn(with: credential) { authResult, error in
             if let error = error {
-              // ...
+              print("errr 1 \(error)")
               return
             }
             myuser.fireuser = authResult?.user
-            
+            print("errr " , myuser.fireuser!.email , myuser.fireuser!.uid)
             Profile.loadCurrentProfile(completion: { profile, error in
+                print("errr 2 \(error)")
                 if let profile = profile{
-                    
+                    print("errr 3   |" + profile.userID)
                     DBmanger.shared.userDoExists(with: (profile.email)!, completion: {bool in
                                                     if (!bool) {
-                                                        DBmanger.shared.fbinsertUser(with: profile.userID, email: profile.email ?? "no email", url:profile.imageURL?.description , first: profile.firstName ?? "no first", last: profile.lastName ?? "no last")
+                                                        
+                                                        DBmanger.shared.fbinsertUser(with: myuser.fireuser!.uid , email: myuser.fireuser!.email!.description , url:"nil" , first: profile.firstName ?? "no first", last: profile.lastName ?? "no last")
+                                                             
                                                     }
                     })
                     DBmanger.shared.setuser(with: profile.email!)
+                    self.dismiss(animated: true, completion: nil)
                 }
             })
+            
+            
+            
+            
             // User is signed in
             // ...
         }

@@ -76,10 +76,12 @@ extension profileViewController:UITableViewDelegate,UITableViewDataSource{
                 try FirebaseAuth.Auth.auth().signOut()
                 
                 // present login view controller
-                let vc = logiViewController()
-                let nav = UINavigationController(rootViewController: vc)
-                nav.modalPresentationStyle = .fullScreen
-                strongSelf.present(nav, animated: true)
+//                let vc = logiViewController()
+//                let nav = UINavigationController(rootViewController: vc)
+//                nav.modalPresentationStyle = .fullScreen
+//                strongSelf.present(nav, animated: true
+                let login = logiViewController()
+                self?.navigationController?.pushViewController(login, animated: true)
             }
             catch {
                 print("failed to logout")
@@ -87,5 +89,9 @@ extension profileViewController:UITableViewDelegate,UITableViewDataSource{
         }))
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(actionSheet, animated: true)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let seg = segue.destination as!logiViewController
+        
     }
 }
