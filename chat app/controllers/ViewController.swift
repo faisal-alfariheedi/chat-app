@@ -104,8 +104,8 @@ extension logiViewController:LoginButtonDelegate {
                     DBmanger.shared.userDoExists(with: (profile.email)!, completion: {bool in
                                                     if (!bool) {
                                                         
-                                                        DBmanger.shared.fbinsertUser(with: myuser.fireuser!.uid , email: myuser.fireuser!.email!.description , url:"nil" , first: profile.firstName ?? "no first", last: profile.lastName ?? "no last")
-                                                             
+//                                                        DBmanger.shared.fbinsertUser(with: myuser.fireuser!.uid , email: myuser.fireuser!.email!.description , url:"nil" , first: profile.firstName ?? "no first", last: profile.lastName ?? "no last")
+//                                                             
                                                     }
                     })
                     DBmanger.shared.setuser(with: profile.email!)

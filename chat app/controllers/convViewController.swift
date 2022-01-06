@@ -45,6 +45,7 @@ class convViewController: UIViewController {
            super.viewDidAppear(animated)
      
            validateAuth()
+        DBmanger.shared.setuser(with: (Auth.auth().currentUser?.email)!)
        }
     
     @IBAction func newconv(_ sender: UIBarButtonItem) {
@@ -53,19 +54,20 @@ class convViewController: UIViewController {
            // current user is set automatically when you log a user in
            if Auth.auth().currentUser == nil {
                // present login view controller
-               performSegue(withIdentifier: "login", sender: 1)
-//               let vc = logiViewController()
-//               let nav = UINavigationController(rootViewController: vc)
-//               nav.modalPresentationStyle = .fullScreen
-//               present(nav, animated: true)
-           }
+//               performSegue(withIdentifier: "login", sender: 1)
+               let vc = LoginViewController()
+               vc.title = "Log in"
+               let nav = UINavigationController(rootViewController: vc)
+               nav.modalPresentationStyle = .fullScreen
+               present(nav, animated: true)
+               
        }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let seg=segue.destination as! UINavigationController
-        let log = seg.viewControllers[0] as! logiViewController
-        log.own=self
-        
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let seg=segue.destination as! UINavigationController
+//        let log = seg.viewControllers[0] as! logiViewController
+//        log.own=self
+//
     }
     private func setupTableView(){
            tableView.delegate = self

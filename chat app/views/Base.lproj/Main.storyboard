@@ -61,7 +61,7 @@
                             <constraint firstItem="ZOf-o2-3Kg" firstAttribute="top" secondItem="ZrF-W7-9nh" secondAttribute="top" id="qyi-NK-1WI"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="profile" id="4Ah-h7-LH6"/>
+                    <tabBarItem key="tabBarItem" title="profile" selectedImage="person.circle" catalog="system" id="4Ah-h7-LH6"/>
                     <connections>
                         <outlet property="img" destination="RpM-p2-LoX" id="Z57-g0-UTR"/>
                         <outlet property="table" destination="tWh-Jf-IVz" id="17m-En-cQN"/>
@@ -108,7 +108,6 @@
                     </navigationItem>
                     <connections>
                         <segue destination="Jv2-bg-dHo" kind="show" identifier="chat" id="IJa-5C-x4v"/>
-                        <segue destination="ieC-bF-mA9" kind="showDetail" identifier="login" id="N6e-ap-24j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ban-jZ-K4c" sceneMemberID="firstResponder"/>
@@ -200,7 +199,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="pSk-uy-9oH">
-                                <rect key="frame" x="20" y="243" width="374" height="570"/>
+                                <rect key="frame" x="20" y="243" width="374" height="619"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUH-PN-1op">
                                         <rect key="frame" x="10" y="10" width="354" height="45"/>
@@ -336,7 +335,7 @@
         <scene sceneID="tOf-DC-pLj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EAe-L4-5Wc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="chatlist" id="wzq-VB-ZoJ"/>
+                    <tabBarItem key="tabBarItem" title="chatlist" selectedImage="bubble.right" catalog="system" id="wzq-VB-ZoJ"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="SeU-Cg-rxz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jzy-ih-4yP">
@@ -374,6 +373,8 @@
     </scenes>
     <resources>
         <image name="Facebook_Messenger-Logo.wine.png" width="283" height="189"/>
+        <image name="bubble.right" catalog="system" width="128" height="110"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

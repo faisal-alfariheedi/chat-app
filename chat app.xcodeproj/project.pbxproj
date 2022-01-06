@@ -32,6 +32,9 @@
 		3AECE38B2784EB2000BFA22D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3AECE38A2784EB2000BFA22D /* RealmSwift */; };
 		3AECE38E2784EDE500BFA22D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AECE38C2784EC9A00BFA22D /* GoogleService-Info.plist */; };
 		3AECE3912785CFBB00BFA22D /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3902785CFBB00BFA22D /* models.swift */; };
+		3AECE3952787211200BFA22D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3932787211200BFA22D /* LoginViewController.swift */; };
+		3AECE3962787211200BFA22D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3942787211200BFA22D /* RegisterViewController.swift */; };
+		3AECE398278721BB00BFA22D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE397278721BA00BFA22D /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		3AECE3872784E0C800BFA22D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		3AECE38C2784EC9A00BFA22D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3AECE3902785CFBB00BFA22D /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
+		3AECE3932787211200BFA22D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3AECE3942787211200BFA22D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3AECE397278721BA00BFA22D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,7 @@
 				3AECE32C2784CAF500BFA22D /* SceneDelegate.swift */,
 				3AECE3332784CAF500BFA22D /* chat_app.xcdatamodeld */,
 				3AECE3362784CAF600BFA22D /* Assets.xcassets */,
+				3AECE397278721BA00BFA22D /* Extensions.swift */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -150,6 +157,7 @@
 		3AECE3742784DEE300BFA22D /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3AECE3922787211200BFA22D /* Login */,
 				3AECE32E2784CAF500BFA22D /* ViewController.swift */,
 				3AECE37D2784DFB500BFA22D /* convViewController.swift */,
 				3AECE37F2784DFE900BFA22D /* regViewController.swift */,
@@ -177,6 +185,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AECE3922787211200BFA22D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3AECE3932787211200BFA22D /* LoginViewController.swift */,
+				3AECE3942787211200BFA22D /* RegisterViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AECE3952787211200BFA22D /* LoginViewController.swift in Sources */,
 				3AECE32F2784CAF500BFA22D /* ViewController.swift in Sources */,
 				3AECE3352784CAF500BFA22D /* chat_app.xcdatamodeld in Sources */,
 				3AECE3822784E04100BFA22D /* DBmanager.swift in Sources */,
@@ -279,8 +297,10 @@
 				3AECE32D2784CAF500BFA22D /* SceneDelegate.swift in Sources */,
 				3AECE3802784DFE900BFA22D /* regViewController.swift in Sources */,
 				3AECE3882784E0C800BFA22D /* profileViewController.swift in Sources */,
+				3AECE3962787211200BFA22D /* RegisterViewController.swift in Sources */,
 				3AECE3862784E0A900BFA22D /* chatViewController.swift in Sources */,
 				3AECE3912785CFBB00BFA22D /* models.swift in Sources */,
+				3AECE398278721BB00BFA22D /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

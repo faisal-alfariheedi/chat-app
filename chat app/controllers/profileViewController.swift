@@ -7,7 +7,7 @@
 
 import UIKit
 import Firebase
-
+import FacebookLogin
 
 
 
@@ -74,14 +74,13 @@ extension profileViewController:UITableViewDelegate,UITableViewDataSource{
             }
             do {
                 try FirebaseAuth.Auth.auth().signOut()
-                
+                if AccessToken.current == nil { FBSDKLoginKit.LoginManager().logOut()}
                 // present login view controller
-//                let vc = logiViewController()
-//                let nav = UINavigationController(rootViewController: vc)
-//                nav.modalPresentationStyle = .fullScreen
-//                strongSelf.present(nav, animated: true
-                let login = logiViewController()
-                self?.navigationController?.pushViewController(login, animated: true)
+                let vc = LoginViewController()
+                vc.title = "Log in"
+                let nav = UINavigationController(rootViewController: vc)
+                nav.modalPresentationStyle = .fullScreen
+                self!.present(nav, animated: true)
             }
             catch {
                 print("failed to logout")

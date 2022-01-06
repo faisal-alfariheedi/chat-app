@@ -77,9 +77,17 @@ final class DBmanger {
             }
         })
         }
-    public func fbinsertUser(with id:String,email:String,url:String,first:String,last:String){
-            myuser.userr = userr(id: id, email: email, first: first, last: last, picurl:url)
-            self.database.child("users").child(myuser.userr!.firemailsafe).setValue(["first_name":myuser.userr!.first,"last_name":myuser.userr!.last,"picurl":myuser.userr!.picurl])
+    public func fbinsertUser(with id:String,email:String,first:String,last:String,img:Data){
+        uploadProfilePicture(with: img, fileName: "\(id) profile", completion: {Result in
+            switch Result{
+                case .success(let url):
+                    myuser.userr = userr(id: id, email: email, first: first, last: last, picurl:url)
+                        self.database.child("users").child(myuser.userr!.firemailsafe).setValue(["first_name":myuser.userr!.first,"last_name":myuser.userr!.last,"picurl":myuser.userr!.picurl])
+                
+                case .failure(let err): print(err)
+            }
+        })
+        
         }
     
     
