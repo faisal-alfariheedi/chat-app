@@ -1,10 +1,10 @@
 //
 //  NewConversationCell.swift
-//  Messenger
+//  chat app
 //
-//  Created by Afraz Siddiqui on 6/15/20.
-//  Copyright © 2020 ASN GROUP LLC. All rights reserved.
+//  Created by faisal on 01/06/1443 AH.
 //
+
 
 import Foundation
 import SDWebImage

@@ -25,6 +25,12 @@ class profileViewController: UIViewController {
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         table.delegate = self
         table.dataSource = self
+        img.contentMode = .scaleAspectFill
+        img.backgroundColor = .white
+        img.layer.borderColor = UIColor.white.cgColor
+        img.layer.borderWidth = 3
+        img.layer.masksToBounds = true
+        img.layer.cornerRadius = img.width/2
         // Do any additional setup after loading the view.
     }
     
