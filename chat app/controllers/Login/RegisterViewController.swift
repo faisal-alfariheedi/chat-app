@@ -105,13 +105,8 @@ final class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Log In"
         view.backgroundColor = .systemBackground
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register",
-                                                            style: .done,
-                                                            target: self,
-                                                            action: #selector(didTapRegister))
 
         registerButton.addTarget(self,
                               action: #selector(registerButtonTapped),
@@ -191,13 +186,13 @@ final class RegisterViewController: UIViewController {
             !firstName.isEmpty,
             !lastName.isEmpty,
             password.count >= 6 else {
-                alertUserLoginError()
+                alertUserregisterError()
                 return
         }
 
         spinner.show(in: view)
 
-        // Firebase Log In
+        // Firebase register
 
         DBmanger.shared.userDoExists(with: email, completion: { [weak self] exists in
             guard let strongSelf = self else {
@@ -210,16 +205,16 @@ final class RegisterViewController: UIViewController {
 
             guard !exists else {
                 // user already exists
-                strongSelf.alertUserLoginError(message: "Looks like a user account for that email address already exists.")
+                strongSelf.alertUserregisterError(message: "Looks like a user with that email address already exists.")
                 return
             }
 
             FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult, error in
                 guard authResult != nil, error == nil else {
-                    print("Error cureating user")
+                    print("Error creating user")
                     return
                 }
-
+                
 //                UserDefaults.standard.setValue(email, forKey: "email")
 //                UserDefaults.standard.setValue("\(firstName) \(lastName)", forKey: "name")
 
@@ -231,7 +226,7 @@ final class RegisterViewController: UIViewController {
         })
     }
 
-    func alertUserLoginError(message: String = "Please enter all information to create a new account.") {
+    func alertUserregisterError(message: String = "Please enter all information to create a new account.") {
         let alert = UIAlertController(title: "Woops",
                                       message: message,
                                       preferredStyle: .alert)

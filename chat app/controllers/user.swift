@@ -14,7 +14,6 @@ struct myuser{
     
 }
 struct userr{
-    let id:String
     let email:String
     let first:String
     let last:String

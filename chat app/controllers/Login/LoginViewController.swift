@@ -72,7 +72,7 @@ final class LoginViewController: UIViewController {
 
     private let facebookLoginButton: FBLoginButton = {
         let button = FBLoginButton()
-        button.permissions = ["email,public_profile"]
+        button.permissions = ["public_profile", "email"]
         return button
     }()
 
@@ -278,28 +278,30 @@ extension LoginViewController: LoginButtonDelegate {
 
                         print("got data from FB, uploading...")
                         DBmanger.shared.fbinsertUser(with: email, email: email, first: firstName, last: lastName, img: data)
+                        
+                        let credential = FacebookAuthProvider.credential(withAccessToken: token)
+                        FirebaseAuth.Auth.auth().signIn(with: credential, completion: { [weak self] authResult, error in
+                            guard let strongSelf = self else {
+                                return
+                            }
+
+                            guard authResult != nil, error == nil else {
+                                if let error = error {
+                                    print("Facebook credential login failed, MFA may be needed - \(error)")
+                                }
+                                return
+                            }
+
+                            print("Successfully logged user in")
+                            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+                        })
 
                     }).resume()
                     
                 }
             })
 
-            let credential = FacebookAuthProvider.credential(withAccessToken: token)
-            FirebaseAuth.Auth.auth().signIn(with: credential, completion: { [weak self] authResult, error in
-                guard let strongSelf = self else {
-                    return
-                }
-
-                guard authResult != nil, error == nil else {
-                    if let error = error {
-                        print("Facebook credential login failed, MFA may be needed - \(error)")
-                    }
-                    return
-                }
-
-                print("Successfully logged user in")
-                strongSelf.navigationController?.dismiss(animated: true, completion: nil)
-            })
+            
         })
     }
 

@@ -27,7 +27,6 @@
 		3AECE3802784DFE900BFA22D /* regViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE37F2784DFE900BFA22D /* regViewController.swift */; };
 		3AECE3822784E04100BFA22D /* DBmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3812784E04100BFA22D /* DBmanager.swift */; };
 		3AECE3842784E06700BFA22D /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3832784E06700BFA22D /* user.swift */; };
-		3AECE3862784E0A900BFA22D /* chatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3852784E0A900BFA22D /* chatViewController.swift */; };
 		3AECE3882784E0C800BFA22D /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3872784E0C800BFA22D /* profileViewController.swift */; };
 		3AECE38B2784EB2000BFA22D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3AECE38A2784EB2000BFA22D /* RealmSwift */; };
 		3AECE38E2784EDE500BFA22D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AECE38C2784EC9A00BFA22D /* GoogleService-Info.plist */; };
@@ -35,6 +34,13 @@
 		3AECE3952787211200BFA22D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3932787211200BFA22D /* LoginViewController.swift */; };
 		3AECE3962787211200BFA22D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3942787211200BFA22D /* RegisterViewController.swift */; };
 		3AECE398278721BB00BFA22D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE397278721BA00BFA22D /* Extensions.swift */; };
+		3AECE39A278ACFCA00BFA22D /* newconvoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE399278ACFCA00BFA22D /* newconvoViewController.swift */; };
+		3AECE39E278AD1CA00BFA22D /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE39C278AD1CA00BFA22D /* ConversationTableViewCell.swift */; };
+		3AECE39F278AD1CA00BFA22D /* NewConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE39D278AD1CA00BFA22D /* NewConversationCell.swift */; };
+		3AECE3A2278AD26600BFA22D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3AECE3A1278AD26600BFA22D /* SDWebImage */; };
+		3AECE3A4278AD8A000BFA22D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3A3278AD89F00BFA22D /* ChatViewController.swift */; };
+		3AECE3A6278ADEC700BFA22D /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3A5278ADEC700BFA22D /* LocationPickerViewController.swift */; };
+		3AECE3A8278AE00E00BFA22D /* PhotoViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3A7278AE00E00BFA22D /* PhotoViewerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,13 +63,18 @@
 		3AECE37F2784DFE900BFA22D /* regViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regViewController.swift; sourceTree = "<group>"; };
 		3AECE3812784E04100BFA22D /* DBmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBmanager.swift; sourceTree = "<group>"; };
 		3AECE3832784E06700BFA22D /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
-		3AECE3852784E0A900BFA22D /* chatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatViewController.swift; sourceTree = "<group>"; };
 		3AECE3872784E0C800BFA22D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		3AECE38C2784EC9A00BFA22D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3AECE3902785CFBB00BFA22D /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
 		3AECE3932787211200BFA22D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3AECE3942787211200BFA22D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3AECE397278721BA00BFA22D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3AECE399278ACFCA00BFA22D /* newconvoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newconvoViewController.swift; sourceTree = "<group>"; };
+		3AECE39C278AD1CA00BFA22D /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
+		3AECE39D278AD1CA00BFA22D /* NewConversationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewConversationCell.swift; sourceTree = "<group>"; };
+		3AECE3A3278AD89F00BFA22D /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = ../../../../SwiftChatApp/Messenger/Controllers/ChatViewController.swift; sourceTree = "<group>"; };
+		3AECE3A5278ADEC700BFA22D /* LocationPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
+		3AECE3A7278AE00E00BFA22D /* PhotoViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +84,7 @@
 			files = (
 				3AECE3682784CCCD00BFA22D /* FacebookLogin in Frameworks */,
 				3AECE3632784CB5D00BFA22D /* FirebaseDatabase in Frameworks */,
+				3AECE3A2278AD26600BFA22D /* SDWebImage in Frameworks */,
 				3AECE38B2784EB2000BFA22D /* RealmSwift in Frameworks */,
 				3AECE3612784CB5D00BFA22D /* FirebaseAuth in Frameworks */,
 				3AECE3652784CB5D00BFA22D /* FirebaseStorage in Frameworks */,
@@ -158,14 +170,18 @@
 			isa = PBXGroup;
 			children = (
 				3AECE3922787211200BFA22D /* Login */,
+				3AECE39B278AD1B000BFA22D /* cells */,
 				3AECE32E2784CAF500BFA22D /* ViewController.swift */,
 				3AECE37D2784DFB500BFA22D /* convViewController.swift */,
+				3AECE399278ACFCA00BFA22D /* newconvoViewController.swift */,
 				3AECE37F2784DFE900BFA22D /* regViewController.swift */,
 				3AECE3812784E04100BFA22D /* DBmanager.swift */,
 				3AECE3832784E06700BFA22D /* user.swift */,
-				3AECE3852784E0A900BFA22D /* chatViewController.swift */,
+				3AECE3A3278AD89F00BFA22D /* ChatViewController.swift */,
 				3AECE3902785CFBB00BFA22D /* models.swift */,
+				3AECE3A7278AE00E00BFA22D /* PhotoViewerViewController.swift */,
 				3AECE3872784E0C800BFA22D /* profileViewController.swift */,
+				3AECE3A5278ADEC700BFA22D /* LocationPickerViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -196,6 +212,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		3AECE39B278AD1B000BFA22D /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				3AECE39C278AD1CA00BFA22D /* ConversationTableViewCell.swift */,
+				3AECE39D278AD1CA00BFA22D /* NewConversationCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,6 +245,7 @@
 				3AECE36A2784CD2200BFA22D /* MessageKit */,
 				3AECE36D2784CD3B00BFA22D /* JGProgressHUD */,
 				3AECE38A2784EB2000BFA22D /* RealmSwift */,
+				3AECE3A1278AD26600BFA22D /* SDWebImage */,
 			);
 			productName = "chat app";
 			productReference = 3AECE3272784CAF500BFA22D /* chat app.app */;
@@ -255,6 +281,7 @@
 				3AECE3692784CD2200BFA22D /* XCRemoteSwiftPackageReference "MessageKit" */,
 				3AECE36C2784CD3B00BFA22D /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 				3AECE36F2784CD5900BFA22D /* XCRemoteSwiftPackageReference "realm-swift" */,
+				3AECE3A0278AD26600BFA22D /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 3AECE3282784CAF500BFA22D /* Products */;
 			projectDirPath = "";
@@ -288,19 +315,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AECE3952787211200BFA22D /* LoginViewController.swift in Sources */,
+				3AECE3A6278ADEC700BFA22D /* LocationPickerViewController.swift in Sources */,
 				3AECE32F2784CAF500BFA22D /* ViewController.swift in Sources */,
+				3AECE3A8278AE00E00BFA22D /* PhotoViewerViewController.swift in Sources */,
 				3AECE3352784CAF500BFA22D /* chat_app.xcdatamodeld in Sources */,
 				3AECE3822784E04100BFA22D /* DBmanager.swift in Sources */,
 				3AECE32B2784CAF500BFA22D /* AppDelegate.swift in Sources */,
 				3AECE3842784E06700BFA22D /* user.swift in Sources */,
+				3AECE39A278ACFCA00BFA22D /* newconvoViewController.swift in Sources */,
 				3AECE37E2784DFB500BFA22D /* convViewController.swift in Sources */,
+				3AECE39E278AD1CA00BFA22D /* ConversationTableViewCell.swift in Sources */,
 				3AECE32D2784CAF500BFA22D /* SceneDelegate.swift in Sources */,
 				3AECE3802784DFE900BFA22D /* regViewController.swift in Sources */,
 				3AECE3882784E0C800BFA22D /* profileViewController.swift in Sources */,
 				3AECE3962787211200BFA22D /* RegisterViewController.swift in Sources */,
-				3AECE3862784E0A900BFA22D /* chatViewController.swift in Sources */,
 				3AECE3912785CFBB00BFA22D /* models.swift in Sources */,
 				3AECE398278721BB00BFA22D /* Extensions.swift in Sources */,
+				3AECE3A4278AD8A000BFA22D /* ChatViewController.swift in Sources */,
+				3AECE39F278AD1CA00BFA22D /* NewConversationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +592,14 @@
 				kind = branch;
 			};
 		};
+		3AECE3A0278AD26600BFA22D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -597,6 +637,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3AECE36F2784CD5900BFA22D /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		3AECE3A1278AD26600BFA22D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AECE3A0278AD26600BFA22D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 

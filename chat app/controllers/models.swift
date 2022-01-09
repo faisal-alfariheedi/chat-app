@@ -8,6 +8,8 @@
 import Foundation
 import MessageKit
 import InputBarAccessoryView
+import UIKit
+import CoreLocation
 // MARK: - message model
 struct Message: MessageType {
     
@@ -42,6 +44,17 @@ extension MessageKind {
         }
     }
 }
+struct Media: MediaItem {
+    var url: URL?
+    var image: UIImage?
+    var placeholderImage: UIImage
+    var size: CGSize
+}
+
+struct Location: LocationItem {
+    var location: CLLocation
+    var size: CGSize
+}
 // MARK: - sender model
 struct Sender: SenderType {
     public var photoURL: String // extend with photo URL
@@ -49,4 +62,23 @@ struct Sender: SenderType {
     public var displayName: String
     
     
+}
+
+// MARK: - convo model
+struct Conversation {
+    let id: String
+    let name: String
+    let otherUserEmail: String
+    let latestMessage: LatestMessage
+}
+
+struct LatestMessage {
+    let date: String
+    let text: String
+    let isRead: Bool
+}
+
+struct SearchResult {
+    let name: String
+    let email: String
 }
