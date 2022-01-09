@@ -23,6 +23,7 @@ class newconvoViewController: UIViewController {
     private let searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "Search for Users..."
+        searchBar.autocapitalizationType = .none
         return searchBar
     }()
 
@@ -127,6 +128,7 @@ extension newconvoViewController: UISearchBarDelegate {
             filterUsers(with: query)
         }
         else {
+            
             // if not, fetch then filter
             DBmanger.shared.getAllUsers(completion: { [weak self] result in
                 switch result {
@@ -134,8 +136,9 @@ extension newconvoViewController: UISearchBarDelegate {
                     self?.hasFetched = true
                     self?.users = usersCollection
                     self?.filterUsers(with: query)
+                        print(self?.users)
                 case .failure(let error):
-                    print("Failed to get usres: \(error)")
+                    print("Failed to get users: \(error)")
                 }
             })
         }
@@ -143,10 +146,11 @@ extension newconvoViewController: UISearchBarDelegate {
 
     func filterUsers(with term: String) {
         // update the UI: eitehr show results or show no results label
-        guard let currentUserEmail = UserDefaults.standard.value(forKey: "email") as? String, hasFetched else {
-            return
-        }
-
+        
+        if(hasFetched){
+        let currentUserEmail = myuser.userr!.email
+        
+        
         let safeEmail = DBmanger.shared.safeEmail(email: currentUserEmail)
 
         self.spinner.dismiss()
@@ -172,7 +176,7 @@ extension newconvoViewController: UISearchBarDelegate {
         })
 
         self.results = results
-
+        }
         updateUI()
     }
 

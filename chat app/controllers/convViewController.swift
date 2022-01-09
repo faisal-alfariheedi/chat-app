@@ -28,9 +28,9 @@ class convViewController: UIViewController {
         let label = UILabel()
         label.text = "No Conversations!"
         label.textAlignment = .center
-        label.textColor = .gray
+        label.textColor = .systemGray
         label.font = .systemFont(ofSize: 21, weight: .medium)
-        label.isHidden = true
+        label.isHidden = false
         return label
     }()
 
@@ -59,13 +59,13 @@ class convViewController: UIViewController {
         
         setupTableView()
         
-//        startListeningForCOnversations()
+        
            
        }
     
     private func startListeningForCOnversations() {
-        let email = myuser.userr!.email
-
+        let email = Auth.auth().currentUser!.email!
+        
         if let observer = loginObserver {
             NotificationCenter.default.removeObserver(observer)
         }
@@ -75,14 +75,19 @@ class convViewController: UIViewController {
         let safeEmail = DBmanger.shared.safeEmail(email: email)
 
         DBmanger.shared.getAllConversations(for: safeEmail, completion: { [weak self] result in
+            
+            
             switch result {
             case .success(let conversations):
                 print("successfully got conversation models")
-                guard !conversations.isEmpty else {
+                if conversations.isEmpty  {
                     self?.tableView.isHidden = true
                     self?.noConversationsLabel.isHidden = false
+                    print("errr nothing")
                     return
                 }
+                    print("errr yay")
+
                 self?.noConversationsLabel.isHidden = true
                 self?.tableView.isHidden = false
                 self?.conversations = conversations
@@ -93,7 +98,7 @@ class convViewController: UIViewController {
             case .failure(let error):
                 self?.tableView.isHidden = true
                 self?.noConversationsLabel.isHidden = false
-                print("failed to get convos: \(error)")
+                print("errr failed to get convos: \(error)")
             }
         })
     }
@@ -110,6 +115,7 @@ class convViewController: UIViewController {
             if let targetConversation = currentConversations.first(where: {
                 $0.otherUserEmail == DBmanger.shared.safeEmail(email: result.email)
             }) {
+                print("there")
                 let vc = ChatViewController(with: targetConversation.otherUserEmail, id: targetConversation.id)
                 vc.isNewConversation = false
                 vc.title = targetConversation.name
@@ -125,17 +131,20 @@ class convViewController: UIViewController {
     }
     
     private func createNewConversation(result: SearchResult) {
+        print("here")
         let name = result.name
         let email = DBmanger.shared.safeEmail(email: result.email)
 
         // check in datbase if conversation with these two users exists
         // if it does, reuse conversation id
         // otherwise use existing code
-
+        print(email)
         DBmanger.shared.conversationExists(iwth: email, completion: { [weak self] result in
             guard let strongSelf = self else {
+                print("bad")
                 return
             }
+            print(result)
             switch result {
             case .success(let conversationId):
                 let vc = ChatViewController(with: email, id: conversationId)
@@ -164,7 +173,11 @@ class convViewController: UIViewController {
                present(nav, animated: true)
                
            }else{
-//               DBmanger.shared.setuser(with: (Auth.auth().currentUser!.email!) )
+               DBmanger.shared.setuser(with: (Auth.auth().currentUser!.email!) )
+               print("errr here")
+               startListeningForCOnversations()
+               
+               
            }
     
 

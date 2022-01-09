@@ -90,6 +90,44 @@ final class DBmanger {
                     myuser.userr = userr(email: email, first: first, last: last, picurl:url)
                         self.database.child("users").child(myuser.userr!.firemailsafe).setValue(["first_name":myuser.userr!.first,"last_name":myuser.userr!.last,"picurl":myuser.userr!.picurl,"email":myuser.userr?.firemailsafe])
                     print("errr done registring")
+                    
+                    self.database.child("users_list").observeSingleEvent(of: .value, with: { snapshot in
+                        if var usersCollection = snapshot.value as? [[String: String]] {
+                            // append to user dictionary
+                            let newElement = [
+                                "name": myuser.userr!.first + " " + myuser.userr!.last,
+                                "email": myuser.userr!.firemailsafe
+                            ]
+                            usersCollection.append(newElement)
+
+                            self.database.child("users_list").setValue(usersCollection, withCompletionBlock: { error, _ in
+                                guard error == nil else {
+                                    
+                                    return
+                                }
+
+                                
+                            })
+                        }
+                        else {
+                            // create that array
+                            let newCollection: [[String: String]] = [
+                                [
+                                    "name": myuser.userr!.first + " " + myuser.userr!.last,
+                                    "email": myuser.userr!.firemailsafe
+                                ]
+                            ]
+
+                            self.database.child("users_list").setValue(newCollection, withCompletionBlock: { error, _ in
+                                guard error == nil else {
+                                    
+                                    return
+                                }
+
+                                
+                            })
+                        }
+                    })
                 
                 case .failure(let err): print(err) ; print("errr failed registring")
             }
@@ -105,7 +143,7 @@ final class DBmanger {
          
         let safeEmail = safeEmail(email: currentEmail)
 
-        let ref = database.child("\(safeEmail)")
+        let ref = database.child("users").child("\(safeEmail)")
 
         ref.observeSingleEvent(of: .value, with: { [weak self] snapshot in
             guard var userNode = snapshot.value as? [String: Any] else {
@@ -241,7 +279,7 @@ final class DBmanger {
             
         }
 
-        guard let myEmmail = UserDefaults.standard.value(forKey: "email") as? String else {
+        guard let myEmmail = myuser.userr?.email else {
             completion(false)
             return
         }
@@ -291,6 +329,7 @@ final class DBmanger {
                     let date = latestMessage["date"] as? String,
                     let message = latestMessage["message"] as? String,
                     let isRead = latestMessage["is_read"] as? Bool else {
+                        
                         return nil
                 }
 
@@ -391,7 +430,7 @@ final class DBmanger {
         // update sender latest message
         // update recipient latest message
 
-        guard let myEmail = UserDefaults.standard.value(forKey: "email") as? String else {
+        guard let myEmail = myuser.userr?.email else {
             completion(false)
             return
         }
@@ -443,7 +482,7 @@ final class DBmanger {
                 break
             }
 
-            guard let myEmmail = UserDefaults.standard.value(forKey: "email") as? String else {
+            guard let myEmmail = myuser.userr?.email else {
                 completion(false)
                 return
             }
@@ -532,8 +571,10 @@ final class DBmanger {
                                 "message": message
                             ]
                             var databaseEntryConversations = [[String: Any]]()
-
-                            guard let currentName = UserDefaults.standard.value(forKey: "name") as? String else {
+                            var currentName = ""
+                            if(myuser.userr != nil ){
+                                currentName = "\(myuser.userr?.first) \(myuser.userr?.last)"
+                            }else{
                                 return
                             }
 
@@ -595,7 +636,7 @@ final class DBmanger {
     }
 
     public func deleteConversation(conversationId: String, completion: @escaping (Bool) -> Void) {
-        guard let email = UserDefaults.standard.value(forKey: "email") as? String else {
+        guard let email = myuser.userr?.email else {
             return
         }
         let safeEmail = safeEmail(email: email)
@@ -605,7 +646,7 @@ final class DBmanger {
         // Get all conversations for current user
         // delete conversation in collection with target id
         // reset those conversations for the user in database
-        let ref = database.child("\(safeEmail)/conversations")
+        let ref = database.child("users").child("\(safeEmail)/conversations")
         ref.observeSingleEvent(of: .value) { snapshot in
             if var conversations = snapshot.value as? [[String: Any]] {
                 var positionToRemove = 0
@@ -634,12 +675,10 @@ final class DBmanger {
 
     public func conversationExists(iwth targetRecipientEmail: String, completion: @escaping (Result<String, Error>) -> Void) {
         let safeRecipientEmail = safeEmail(email: targetRecipientEmail)
-        guard let senderEmail = UserDefaults.standard.value(forKey: "email") as? String else {
-            return
-        }
+        let senderEmail = myuser.userr!.email
         let safeSenderEmail = safeEmail(email: senderEmail)
 
-        database.child("\(safeRecipientEmail)/conversations").observeSingleEvent(of: .value, with: { snapshot in
+        database.child("users").child("\(safeRecipientEmail)/conversations").observeSingleEvent(of: .value, with: { snapshot in
             guard let collection = snapshot.value as? [[String: Any]] else {
                 completion(.failure(DatabaseError.failedToFetch))
                 return
@@ -666,7 +705,7 @@ final class DBmanger {
         })
     }
     public func getAllUsers(completion: @escaping (Result<[[String: String]], Error>) -> Void) {
-        database.child("users").observeSingleEvent(of: .value, with: { snapshot in
+        database.child("users_list").observeSingleEvent(of: .value, with: { snapshot in
             guard let value = snapshot.value as? [[String: String]] else {
                 completion(.failure(DatabaseError.failedToFetch))
                 return
@@ -682,7 +721,7 @@ final class DBmanger {
         public var localizedDescription: String {
             switch self {
             case .failedToFetch:
-                return "This means blah failed"
+                return "failed"
             }
         }
     }

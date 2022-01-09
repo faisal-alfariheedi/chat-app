@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3AECE32B2784CAF500BFA22D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE32A2784CAF500BFA22D /* AppDelegate.swift */; };
 		3AECE32D2784CAF500BFA22D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE32C2784CAF500BFA22D /* SceneDelegate.swift */; };
-		3AECE32F2784CAF500BFA22D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE32E2784CAF500BFA22D /* ViewController.swift */; };
 		3AECE3322784CAF500BFA22D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AECE3302784CAF500BFA22D /* Main.storyboard */; };
 		3AECE3352784CAF500BFA22D /* chat_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3332784CAF500BFA22D /* chat_app.xcdatamodeld */; };
 		3AECE3372784CAF600BFA22D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AECE3362784CAF600BFA22D /* Assets.xcassets */; };
@@ -24,7 +23,6 @@
 		3AECE37B2784DF6A00BFA22D /* Facebook_Messenger-Logo.wine.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AECE3782784DF6A00BFA22D /* Facebook_Messenger-Logo.wine.png */; };
 		3AECE37C2784DF6A00BFA22D /* gog.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AECE3792784DF6A00BFA22D /* gog.png */; };
 		3AECE37E2784DFB500BFA22D /* convViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE37D2784DFB500BFA22D /* convViewController.swift */; };
-		3AECE3802784DFE900BFA22D /* regViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE37F2784DFE900BFA22D /* regViewController.swift */; };
 		3AECE3822784E04100BFA22D /* DBmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3812784E04100BFA22D /* DBmanager.swift */; };
 		3AECE3842784E06700BFA22D /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3832784E06700BFA22D /* user.swift */; };
 		3AECE3882784E0C800BFA22D /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECE3872784E0C800BFA22D /* profileViewController.swift */; };
@@ -47,7 +45,6 @@
 		3AECE3272784CAF500BFA22D /* chat app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "chat app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AECE32A2784CAF500BFA22D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AECE32C2784CAF500BFA22D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3AECE32E2784CAF500BFA22D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3AECE3312784CAF500BFA22D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3AECE3342784CAF500BFA22D /* chat_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = chat_app.xcdatamodel; sourceTree = "<group>"; };
 		3AECE3362784CAF600BFA22D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +57,6 @@
 		3AECE3782784DF6A00BFA22D /* Facebook_Messenger-Logo.wine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook_Messenger-Logo.wine.png"; sourceTree = "<group>"; };
 		3AECE3792784DF6A00BFA22D /* gog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gog.png; sourceTree = "<group>"; };
 		3AECE37D2784DFB500BFA22D /* convViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = convViewController.swift; sourceTree = "<group>"; };
-		3AECE37F2784DFE900BFA22D /* regViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regViewController.swift; sourceTree = "<group>"; };
 		3AECE3812784E04100BFA22D /* DBmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBmanager.swift; sourceTree = "<group>"; };
 		3AECE3832784E06700BFA22D /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		3AECE3872784E0C800BFA22D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
@@ -171,10 +167,8 @@
 			children = (
 				3AECE3922787211200BFA22D /* Login */,
 				3AECE39B278AD1B000BFA22D /* cells */,
-				3AECE32E2784CAF500BFA22D /* ViewController.swift */,
 				3AECE37D2784DFB500BFA22D /* convViewController.swift */,
 				3AECE399278ACFCA00BFA22D /* newconvoViewController.swift */,
-				3AECE37F2784DFE900BFA22D /* regViewController.swift */,
 				3AECE3812784E04100BFA22D /* DBmanager.swift */,
 				3AECE3832784E06700BFA22D /* user.swift */,
 				3AECE3A3278AD89F00BFA22D /* ChatViewController.swift */,
@@ -316,7 +310,6 @@
 			files = (
 				3AECE3952787211200BFA22D /* LoginViewController.swift in Sources */,
 				3AECE3A6278ADEC700BFA22D /* LocationPickerViewController.swift in Sources */,
-				3AECE32F2784CAF500BFA22D /* ViewController.swift in Sources */,
 				3AECE3A8278AE00E00BFA22D /* PhotoViewerViewController.swift in Sources */,
 				3AECE3352784CAF500BFA22D /* chat_app.xcdatamodeld in Sources */,
 				3AECE3822784E04100BFA22D /* DBmanager.swift in Sources */,
@@ -326,7 +319,6 @@
 				3AECE37E2784DFB500BFA22D /* convViewController.swift in Sources */,
 				3AECE39E278AD1CA00BFA22D /* ConversationTableViewCell.swift in Sources */,
 				3AECE32D2784CAF500BFA22D /* SceneDelegate.swift in Sources */,
-				3AECE3802784DFE900BFA22D /* regViewController.swift in Sources */,
 				3AECE3882784E0C800BFA22D /* profileViewController.swift in Sources */,
 				3AECE3962787211200BFA22D /* RegisterViewController.swift in Sources */,
 				3AECE3912785CFBB00BFA22D /* models.swift in Sources */,

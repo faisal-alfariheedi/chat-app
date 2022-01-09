@@ -89,8 +89,5 @@ extension profileViewController:UITableViewDelegate,UITableViewDataSource{
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(actionSheet, animated: true)
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let seg = segue.destination as!logiViewController
-        
-    }
+    
 }
